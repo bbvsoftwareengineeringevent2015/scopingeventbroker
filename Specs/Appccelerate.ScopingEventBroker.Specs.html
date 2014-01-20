@@ -1,0 +1,804 @@
+<html>
+<head>
+  <title>Machine.Specifications Report</title>
+  <style type="text/css">body {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: .9em;
+}
+
+.count {
+  color: lightgrey;
+}
+
+.failure, .notimplemented, .ignored {
+  color: red;
+  font-weight: bold;
+  display: inline;
+}
+
+.notimplemented {
+  color: orange;
+}
+
+.ignored {
+  color: gold;
+}
+
+p.exception_type {
+  color: black;
+  font-weight: bold;
+  display: inline;
+}
+
+pre.exception_message {
+  border-style: dashed;
+  border-color: #FF828D;
+  border-width: thin;
+  background-color: #FFD2CF;
+  white-space: pre-wrap; /* CSS2.1 compliant */
+  white-space: -moz-pre-wrap; /* Mozilla-based browsers */
+  white-space: o-pre-wrap; /* Opera 7+ */
+  padding: 1em;
+}
+
+hr {
+  color: lightgrey;
+  border: 1px solid lightgrey;
+  height: 1px;
+}
+
+ul.prev-next {
+  padding: 0;
+  margin: 0;
+  font-size: 2em;
+  }
+  
+.spec ul.prev-next {
+  float: right;
+  right: 30%;
+  position: absolute;
+  margin-top: -1em;
+  }
+
+ul.prev-next li {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+ul.prev-next li a {
+  color: lightgrey;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0 .3em;
+  border: 1px solid lightgrey;
+}
+
+ul.prev-next li.failure a {
+  border-color: red;
+}
+
+ul.prev-next li.notimplemented a {
+  border-color: orange;
+}
+
+ul.prev-next li.ignored a {
+  border-color: gold;
+}
+
+ul.prev-next li.failure a:hover {
+  background-color: red;
+  color: #fff;
+}
+
+ul.prev-next li.notimplemented a:hover {
+  background-color: orange;
+  color: #000;
+}
+
+ul.prev-next li.ignored a:hover {
+  background-color: gold;
+  color: #000;
+}
+
+ul.prev-next li.back a:hover {
+  background-color: #444;
+  color: #fff;
+}
+
+div.supplement {
+  display: none;
+}
+  
+@media print {
+  ul.prev-next {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+  <ul class="prev-next">
+  </ul>
+  <h1>
+    Appccelerate.ScopingEventBroker.Specs
+</h1>
+<h2 class="count">
+  3 concerns,
+  23 contexts,
+  45 specifications
+</h2>
+<script type="text/javascript">
+  function toggleVisibility(id, description)
+  {
+    var section = document.getElementById(id);
+    var link = document.getElementById(id + "_link");
+
+    if (section.style.display == "block")
+    {
+      section.style.display = "none";
+      link.innerHTML = "Show " + description;
+    } else
+    {
+      section.style.display = "block";
+      link.innerHTML = "Hide " + description;
+    }
+  };
+</script> 
+  
+  <hr/>
+  <hr/>
+  
+  <h2 class="concern">
+  Per Call Scope specifications
+</h2>
+<h3 class="count">
+  4 contexts, 8 specifications
+</h3><h3 class="context">
+  when no scope acquired
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="1">should invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="2">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when scope cancelled
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="3">should not invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="4">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when scope disposed and not released
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="5">should not invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="6">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when scope released
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="7">should invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="8">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h2 class="concern">
+  Per Thread Scope specifications
+</h2>
+<h3 class="count">
+  10 contexts, 19 specifications
+</h3><h3 class="context">
+  when no scope acquired on thread
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="9">should invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="10">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when scope acquired on different threads
+</h3>
+<h4 class="count">
+  1 specification
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="11">should use different scope for each thread</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when scope cancelled on another thread
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="14">should invoke asynchronous subscriber for releasing thread</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="15">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when scope cancelled on both threads
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="16">should not invoke asynchronous subscriber for both threads</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="17">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when scope cancelled on same thread
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="12">should not invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="13">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when scope disposed and not released on another thread
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="20">should invoke asynchronous subscriber for releasing thread</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="21">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when scope disposed and not released on both threads
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="22">should not invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="23">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when scope disposed and not released on same thread
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="18">should not invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="19">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when scope released on both threads
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="26">should invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="27">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when scope released on same thread
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="24">should invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="25">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h2 class="concern">
+  Transaction Scope specifications
+</h2>
+<h3 class="count">
+  9 contexts, 18 specifications
+</h3><h3 class="context">
+  when dependent scope and all completed
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="42">should invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="43">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when dependent scope nested not completed
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="44">should not invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="45">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when nested scope and outer complete
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="34">should invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="35">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when nested scope completed but outer not
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="32">should invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="33">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when nested scope not completed but outer
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="36">should invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="37">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when nested scope suppressed and completed
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="40">should invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="41">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when nested scope suppressed but not completed
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="38">should invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="39">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when scope completed
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="30">should invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="31">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul><h3 class="context">
+  when scope disposed and not completed
+</h3>
+<h4 class="count">
+  2 specifications
+</h4>
+ 
+        <ul>
+          <li class="spec"><span id="28">should not invoke asynchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+          <li class="spec"><span id="29">should invoke synchronous subscriber</span>
+
+
+
+
+ 
+
+ 
+
+          </li>
+        </ul>
+    <hr/>
+</body>
+</html>

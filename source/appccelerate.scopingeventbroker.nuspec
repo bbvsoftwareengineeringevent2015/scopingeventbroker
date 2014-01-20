@@ -1,0 +1,37 @@
+﻿<?xml version="1.0"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <id>Appccelerate.ScopingEventBroker</id>
+    <version>0.0.0</version>
+    <title>Appccelerate.ScopingEventBroker</title>
+    <authors>Appccelerate team</authors>
+    <owners>Appccelerate team</owners>
+    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
+    <projectUrl>https://github.com/appccelerate/scopingeventbroker</projectUrl>
+    <iconUrl>https://github.com/appccelerate/appccelerate/raw/master/docs/nuget.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <summary>Scoping event broker allows to cancel asynchronous events.</summary>
+    <description>
+      The scoping event broker adds a notion of an unit of work to your event broker usage which allows to cancel asynchronous events.
+    </description>
+    <releaseNotes>
+    </releaseNotes>
+    <copyright>Copyright 2012-2014</copyright>
+    <tags>Appccelerate event-broker transactions unitofwork scoping</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="net45" />
+      <frameworkAssembly assemblyName="System.Transactions" targetFramework="net45" />
+    </frameworkAssemblies>
+    <dependencies>
+      <dependency id="Appccelerate.Fundamentals" version="[2.0,3.0)" />
+      <dependency id="Appccelerate.EventBroker" version="[3.1,4.0)"/>
+    </dependencies>	
+  </metadata>
+  <files>
+    <file src="Appccelerate.ScopingEventBroker\bin\Release\Appccelerate.ScopingEventBroker.dll" target="lib\net45" />
+    <file src="Appccelerate.ScopingEventBroker\bin\Release\Appccelerate.ScopingEventBroker.pdb" target="lib\net45" />
+    <file src="Appccelerate.ScopingEventBroker\bin\Release\Appccelerate.ScopingEventBroker.xml" target="lib\net45" />
+    <file src="Appccelerate.ScopingEventBroker\**\*.cs" target="src" />
+  </files>  
+</package>
