@@ -1,18 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appccelerate.ScopingEventBroker", "Appccelerate.ScopingEventBroker\Appccelerate.ScopingEventBroker.csproj", "{AE28F00C-B13B-4B54-ABFA-9658BB8D4243}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appccelerate.ScopingEventBroker.Specs", "Appccelerate.ScopingEventBroker.Specs\Appccelerate.ScopingEventBroker.Specs.csproj", "{7597C23D-E48F-492D-8EE6-87DF72336FA1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appccelerate.ScopingEventBroker.Facts", "Appccelerate.ScopingEventBroker.Facts\Appccelerate.ScopingEventBroker.Facts.csproj", "{1847B052-60C9-4A36-8BD2-B36ED20C0A4D}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{60FCC6ED-1458-40FC-8713-3EA98851AC12}"
-	ProjectSection(SolutionItems) = preProject
-		appccelerate.scopingeventbroker.nuspec = appccelerate.scopingeventbroker.nuspec
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

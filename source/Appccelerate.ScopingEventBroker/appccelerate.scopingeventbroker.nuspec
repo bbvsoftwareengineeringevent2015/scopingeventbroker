@@ -29,9 +29,9 @@
     </dependencies>	
   </metadata>
   <files>
-    <file src="Appccelerate.ScopingEventBroker\bin\Release\Appccelerate.ScopingEventBroker.dll" target="lib\net45" />
-    <file src="Appccelerate.ScopingEventBroker\bin\Release\Appccelerate.ScopingEventBroker.pdb" target="lib\net45" />
-    <file src="Appccelerate.ScopingEventBroker\bin\Release\Appccelerate.ScopingEventBroker.xml" target="lib\net45" />
-    <file src="Appccelerate.ScopingEventBroker\**\*.cs" target="src" />
+    <file src="bin\Release\Appccelerate.ScopingEventBroker.dll" target="lib\net45" />
+    <file src="bin\Release\Appccelerate.ScopingEventBroker.pdb" target="lib\net45" />
+    <file src="bin\Release\Appccelerate.ScopingEventBroker.xml" target="lib\net45" />
+    <file src="**\*.cs" target="src" />
   </files>  
 </package>
