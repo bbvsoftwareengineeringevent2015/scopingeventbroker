@@ -1,6 +1,6 @@
 ﻿//-------------------------------------------------------------------------------
 // <copyright file="PerCallScopeSpecifications.cs" company="Appccelerate">
-//   Copyright (c) 2008-2013
+//   Copyright (c) 2008-2014
 //
 //   Licensed under the Apache License, Version 2.0 (the "License");
 //   you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
 
     using Machine.Specifications;
 
-    public class when_no_scope_acquired : PerCallScopeSpecification
+    public class When_no_scope_acquired : PerCallScopeSpecification
     {
         Because of = () => publisher.Publish();
 
@@ -31,7 +31,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(Called);
     }
 
-    public class when_scope_cancelled : PerCallScopeSpecification
+    public class When_scope_cancelled : PerCallScopeSpecification
     {
         Because of = () =>
             {
@@ -48,7 +48,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(Called);
     }
 
-    public class when_scope_disposed_and_not_released : PerCallScopeSpecification
+    public class When_scope_disposed_and_not_released : PerCallScopeSpecification
     {
         Because of = () =>
         {
@@ -63,7 +63,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(Called);
     }
 
-    public class when_scope_released : PerCallScopeSpecification
+    public class When_scope_released : PerCallScopeSpecification
     {
         Because of = () =>
         {

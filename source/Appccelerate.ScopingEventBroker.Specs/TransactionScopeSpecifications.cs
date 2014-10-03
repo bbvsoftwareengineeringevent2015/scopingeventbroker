@@ -1,6 +1,6 @@
 ﻿//-------------------------------------------------------------------------------
 // <copyright file="TransactionScopeSpecifications.cs" company="Appccelerate">
-//   Copyright (c) 2008-2013
+//   Copyright (c) 2008-2014
 //
 //   Licensed under the Apache License, Version 2.0 (the "License");
 //   you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
 
     using Machine.Specifications;
 
-    public class when_scope_disposed_and_not_completed : TransactionScopeSpecification
+    public class When_scope_disposed_and_not_completed : TransactionScopeSpecification
     {
         Because of = () =>
         {
@@ -41,7 +41,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(Called);
     }
 
-    public class when_scope_completed : TransactionScopeSpecification
+    public class When_scope_completed : TransactionScopeSpecification
     {
         Because of = () =>
             {
@@ -58,7 +58,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(Called);
     }
 
-    public class when_nested_scope_completed_but_outer_not : TransactionScopeSpecification
+    public class When_nested_scope_completed_but_outer_not : TransactionScopeSpecification
     {
         Because of = () =>
         {
@@ -80,7 +80,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(CalledForInnerAndOuter);
     }
 
-    public class when_nested_scope_and_outer_complete : TransactionScopeSpecification
+    public class When_nested_scope_and_outer_complete : TransactionScopeSpecification
     {
         Because of = () =>
         {
@@ -104,7 +104,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(CalledForInnerAndOuter);
     }
 
-    public class when_nested_scope_not_completed_but_outer : TransactionScopeSpecification
+    public class When_nested_scope_not_completed_but_outer : TransactionScopeSpecification
     {
         Because of = () =>
         {
@@ -126,7 +126,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(CalledForInnerAndOuter);
     }
 
-    public class when_nested_scope_suppressed_but_not_completed : TransactionScopeSpecification
+    public class When_nested_scope_suppressed_but_not_completed : TransactionScopeSpecification
     {
         Because of = () =>
         {
@@ -148,7 +148,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(CalledForInnerAndOuter);
     }
 
-    public class when_nested_scope_suppressed_and_completed : TransactionScopeSpecification
+    public class When_nested_scope_suppressed_and_completed : TransactionScopeSpecification
     {
         Because of = () =>
         {
@@ -172,7 +172,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(CalledForInnerAndOuter);
     }
 
-    public class when_dependent_scope_and_all_completed : TransactionScopeSpecification
+    public class When_dependent_scope_and_all_completed : TransactionScopeSpecification
     {
         Because of = () =>
         {
@@ -205,7 +205,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(CalledForInnerAndOuter);
     }
 
-    public class when_dependent_scope_nested_not_completed : TransactionScopeSpecification
+    public class When_dependent_scope_nested_not_completed : TransactionScopeSpecification
     {
         Because of = () => Catch.Exception(
             () =>

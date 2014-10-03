@@ -1,6 +1,6 @@
 ﻿//-------------------------------------------------------------------------------
 // <copyright file="PerThreadScopeSpecifications.cs" company="Appccelerate">
-//   Copyright (c) 2008-2013
+//   Copyright (c) 2008-2014
 //
 //   Licensed under the Apache License, Version 2.0 (the "License");
 //   you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
 
     using Machine.Specifications;
 
-    public class when_no_scope_acquired_on_thread : PerThreadScopeSpecification
+    public class When_no_scope_acquired_on_thread : PerThreadScopeSpecification
     {
         Because of = () => publisher.Publish();
 
@@ -34,7 +34,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(CalledOnce);
     }
 
-    public class when_scope_acquired_on_different_threads : PerThreadScopeSpecification
+    public class When_scope_acquired_on_different_threads : PerThreadScopeSpecification
     {
         private static IEventScope firstScope;
         private static IEventScope secondScope;
@@ -57,7 +57,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_use_different_scope_for_each_thread = () => firstScope.Should().NotBeSameAs(secondScope);
     }
 
-    public class when_scope_cancelled_on_same_thread : PerThreadScopeSpecification
+    public class When_scope_cancelled_on_same_thread : PerThreadScopeSpecification
     {
         Because of = () =>
         {
@@ -74,7 +74,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(CalledOnce);
     }
 
-    public class when_scope_cancelled_on_another_thread : PerThreadScopeSpecification
+    public class When_scope_cancelled_on_another_thread : PerThreadScopeSpecification
     {
         Because of = () =>
             {
@@ -106,7 +106,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(CalledTwice);
     }
 
-    public class when_scope_cancelled_on_both_threads : PerThreadScopeSpecification
+    public class When_scope_cancelled_on_both_threads : PerThreadScopeSpecification
     {
         Because of = () =>
         {
@@ -138,7 +138,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(CalledTwice);
     }
 
-    public class when_scope_disposed_and_not_released_on_same_thread : PerThreadScopeSpecification
+    public class When_scope_disposed_and_not_released_on_same_thread : PerThreadScopeSpecification
     {
         Because of = () =>
         {
@@ -153,7 +153,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(CalledOnce);
     }
 
-    public class when_scope_disposed_and_not_released_on_another_thread : PerThreadScopeSpecification
+    public class When_scope_disposed_and_not_released_on_another_thread : PerThreadScopeSpecification
     {
         Because of = () =>
         {
@@ -183,7 +183,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(CalledTwice);
     }
 
-    public class when_scope_disposed_and_not_released_on_both_threads : PerThreadScopeSpecification
+    public class When_scope_disposed_and_not_released_on_both_threads : PerThreadScopeSpecification
     {
         Because of = () =>
         {
@@ -211,7 +211,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(CalledTwice);
     }
 
-    public class when_scope_released_on_same_thread : PerThreadScopeSpecification
+    public class When_scope_released_on_same_thread : PerThreadScopeSpecification
     {
         Because of = () =>
         {
@@ -228,7 +228,7 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(CalledOnce);
     }
 
-    public class when_scope_released_on_both_threads : PerThreadScopeSpecification
+    public class When_scope_released_on_both_threads : PerThreadScopeSpecification
     {
         Because of = () =>
         {

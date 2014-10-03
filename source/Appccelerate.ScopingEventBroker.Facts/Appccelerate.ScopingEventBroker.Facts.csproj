@@ -31,9 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Appccelerate.EventBroker">
-      <HintPath>..\packages\Appccelerate.EventBroker.3.7.0\lib\net45\Appccelerate.EventBroker.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Appccelerate.EventBroker, Version=3.8.0.0, Culture=neutral, PublicKeyToken=917bca444d1f2b4c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Appccelerate.EventBroker.3.8.0\lib\net45\Appccelerate.EventBroker.dll</HintPath>
     </Reference>
     <Reference Include="Appccelerate.Fundamentals">
       <HintPath>..\packages\Appccelerate.Fundamentals.2.6.0\lib\portable-windows8+net45\Appccelerate.Fundamentals.dll</HintPath>
