@@ -16,7 +16,7 @@
     </description>
     <releaseNotes>
     </releaseNotes>
-    <copyright>Copyright 2012-2014</copyright>
+    <copyright>Copyright 2012-2015</copyright>
     <tags>Appccelerate event-broker transactions unitofwork scoping</tags>
     <frameworkAssemblies>
       <frameworkAssembly assemblyName="System" targetFramework="net45" />
@@ -24,8 +24,8 @@
       <frameworkAssembly assemblyName="System.Transactions" targetFramework="net45" />
     </frameworkAssemblies>
     <dependencies>
-      <dependency id="Appccelerate.Fundamentals" version="[2.0,3.0)" />
-      <dependency id="Appccelerate.EventBroker" version="[3.1,4.0)"/>
+      <dependency id="Appccelerate.Fundamentals" version="[2.8,3.0)" />
+      <dependency id="Appccelerate.EventBroker" version="[3.15,4.0)"/>
     </dependencies>	
   </metadata>
   <files>
