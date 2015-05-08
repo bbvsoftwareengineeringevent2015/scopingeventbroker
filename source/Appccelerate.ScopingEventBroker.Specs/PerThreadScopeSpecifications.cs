@@ -34,29 +34,6 @@ namespace Appccelerate.ScopingEventBroker.Specification
         It should_invoke_synchronous_subscriber = () => subscriber.Synchronous.Should().Be(CalledOnce);
     }
 
-    public class When_scope_acquired_on_different_threads : PerThreadScopeSpecification
-    {
-        private static IEventScope firstScope;
-        private static IEventScope secondScope;
-
-        Because of = () =>
-        {
-            Tuple<IEventScope, IEventScope> result = 
-                ExecuteOnDifferentThreads(() => scopeContext.Acquire(), () => scopeContext.Acquire());
-
-            firstScope = result.Item1;
-            secondScope = result.Item2;
-        };
-
-        Cleanup cleanup = () =>
-        {
-            firstScope.Dispose();
-            secondScope.Dispose();
-        };
-
-        It should_use_different_scope_for_each_thread = () => firstScope.Should().NotBeSameAs(secondScope);
-    }
-
     public class When_scope_cancelled_on_same_thread : PerThreadScopeSpecification
     {
         Because of = () =>
